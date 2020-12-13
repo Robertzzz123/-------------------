@@ -6,7 +6,7 @@ for i in range(1, len(mas)):
 
 maximums = maximum
 mas1 = mas
-for i in range(1, len(mas1)):
+for i in range(0, len(mas1)):
     if mas1[i] < maximum  :
         maximums = mas1[i]
 if maximums == maximum:
