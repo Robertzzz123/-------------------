@@ -21,8 +21,7 @@ except ValueError:
     print("Error type of value!")
 except MyError as mr:
     print(mr)
-else:
-    print(a)
+
     
 class Fraction:
     """Находим сумму сложения двух дробей"""
