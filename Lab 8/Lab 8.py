@@ -45,11 +45,6 @@ class Goods(Storage):
         self.dates = {}
 
     def reserv(self, date, places):
-        """
-           >>> reserved=Test(5)
-           >>> a.multiply_by_2()
-           10
-           """
         reserved = instock
         if places + reserved > self.places:
             raise Exception
