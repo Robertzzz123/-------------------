@@ -1,6 +1,6 @@
 class Storage:
     def Storage_method(self):
-
+        self.Storage = Storage
 class Goods(Storage):
     '''Система складского учета'''
     def __init__(self, productname,weight, name):
@@ -51,9 +51,9 @@ class System:
 
     orders = []
 
-    def order(self, productname, weight, count, date, places:
+    def order(self, productname, weight, count, date, places):
         new_order = Order(weight, productname, count, date, places)
         self.orders.append(new_order)
 
-     def reserv(self, order):
+    def reserv(self, order):
         order.reserv()
