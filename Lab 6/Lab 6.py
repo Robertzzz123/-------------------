@@ -13,12 +13,12 @@ class Goods(Storage):
         self.dates = {}
 
     def reserv(self, places, instock):
-       
-        reserved  = self.dates[instock]
+
+        reserved  = self.places[instock]
         if places + reserved > self.places:
             raise Exception
         else:
-            self.dates[instock] = reserved + places
+            self.places[instock] = reserved + places
 
 
 class Order(Storage):
@@ -63,3 +63,4 @@ class System:
 
     def reserv(self, order):
         order.reserv()
+
