@@ -1,7 +1,6 @@
 import math
 class MyError(Exception):
-    def __init__(self, text):
-        self.txt = text
+    pass
 a = input("Enter the numerator of the first fraction: ")
 b = input("Enter the denominator of the first fraction: ")
 c = input("Enter the numerator of the second fraction: ")
