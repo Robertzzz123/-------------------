@@ -1,20 +1,24 @@
 class Storage:
     def Storage_method(self):
         self.Storage = Storage
+
+
 class Goods(Storage):
-    '''Система складского учета'''
-    def __init__(self, productname,weight, name):
+    """Система складского учета"""
+
+    def __init__(self, productname, weight, count):
         self.productname = productname
         self.weight = weight
         self.count = count
         self.dates = {}
 
-    def reserv(self, date, places):
-        reserved = instock
+    def reserv(self, places, instock):
+        reserved: object = instock
         if places + reserved > self.places:
             raise Exception
         else:
             instock = reserved + places
+
 
 class Order(Storage):
     NEW = "New"
@@ -22,7 +26,7 @@ class Order(Storage):
     COUNT = "Count"
     ABSENT = "Absent"
 
-    def __init__(self, town, race, date, places, carrage):
+    def __init__(self, date, places, productname, count, weight):
         self.productname = productname
         self.weight = weight
         self.count = count
@@ -36,9 +40,10 @@ class Order(Storage):
                 self.goods.reserv()
                 self.state = Order.RESERVED
             except:
-                 raise Exception
+                raise Exception
         else:
             raise Exception
+
 
 class System:
     t1 = "Books"
